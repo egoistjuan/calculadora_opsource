@@ -1,6 +1,9 @@
 from funciones_calculadora import sumar_n_numeros
 from funciones_calculadora import multi_n_numeros
 from funciones_calculadora import div_2
+from funciones_calculadora import resolver_para_y
+import numpy as np
+import matplotlib.pyplot as plt
 
 while True:
     print('''
@@ -9,6 +12,7 @@ while True:
     1)Hacer una suma de N numeros,
     2)Hacer una multiplicacion de N numeros,
     3)Hacer una division de 2 numeros
+    4)Resolver la posicion en Y (para la ecuacion y = mx + b)
           
     0)Salir del programa
 
@@ -30,6 +34,11 @@ while True:
     elif opcion == 3:
         division_resultado = div_2()
         print(f'El resultado es: {division_resultado}')
+    
+    elif opcion == 4:
+        resultado = resolver_para_y()
+        print(f'El resultado es: {resultado}')
+
     
     else:
         print('Ejecuta una opcion valida')
