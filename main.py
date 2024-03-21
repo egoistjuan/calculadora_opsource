@@ -15,7 +15,7 @@ while True:
     ''')
     
     opcion = int(input('> '))
-
+ 
     if opcion == 0:
         break
 
@@ -33,3 +33,7 @@ while True:
     
     else:
         print('Ejecuta una opcion valida')
+
+
+print('_________________________________')
+print('Bye Bye gracias por usar mi calculadora')
