@@ -33,6 +33,13 @@ def div_2():
     division_x = number_one / number_second
     return division_x
     
+# y = mx + b
+def resolver_para_y():
+    pendiente = float(input('Porfavor ingresa la pendiente: '))
+    ordenada_al_origen = float(input('Porfavor ingresa la ordenada al origen: '))
+    punto_x = int(input('Ingresa el punto en x: '))
 
+
+    return (pendiente * punto_x) + ordenada_al_origen
 
 
