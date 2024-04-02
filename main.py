@@ -2,6 +2,7 @@ from funciones_calculadora import sumar_n_numeros
 from funciones_calculadora import multi_n_numeros
 from funciones_calculadora import div_2
 from funciones_calculadora import resolver_para_y
+from funciones_calculadora import resolver_matrices
 
 #importamos librerias para poder graficar
 import matplotlib.pyplot as plt
@@ -16,6 +17,7 @@ while True:
     2)Hacer una multiplicacion de N numeros,
     3)Hacer una division de 2 numeros
     4)Resolver la posicion en Y (para la ecuacion y = mx + b)
+    5)Resolver matrices
           
     0)Salir del programa
 
@@ -53,6 +55,10 @@ while True:
         #ax.set(xlim=(0, 8), xticks=np.arange(1, 8), ylim=(0, 8), yticks=np.arange(1, 8))
 
         plt.show()
+    
+    elif opcion == 5:
+        resultado = resolver_matrices()
+        print(f'El resultado de la matriz es: {resultado}')
 
 
     
