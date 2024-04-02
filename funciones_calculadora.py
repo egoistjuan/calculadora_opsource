@@ -44,20 +44,21 @@ def resolver_para_y():
     return {'resultado' :resultado, 'pendiente' :pendiente, 'ordenada_al_origen':ordenada_al_origen, 'punto_en_x' :punto_x}
 
 def resolver_matrices():
-    a = int(input('Ingrese el tamaño de las matrices: '))
-    matriz_a = np.array([])
-    for i in range(a):
-        x = float(input('Ingrese los valores de la primer matriz: '))
-        matriz_a = np.append(matriz_a, x)
-    print(np.floor(matriz_a.reshape((a, -i))))
+    filas_matriz = int(input('Ingrese el numero de filas de las matriz: '))
+    columnas_matriz = int(input('Ingrese el numero de columnas de la matriz: '))
 
-    matriz_b = np.array([])
-    for i in range(a):
-        y = float(input('Ingrese los valores de la segunda matriz: '))
-        matriz_b = np.append(matriz_b, y)
-    print(np.floor(matriz_b.reshape((a, -i))))
+    a = np.zeros((filas_matriz, columnas_matriz))
+    print('Ingrese los valores de x e y si es el caso: ')
+    for x in range(filas_matriz):
+        for y in range(columnas_matriz):
+            a[x, y] = float(input('Ingrese el valor para la posicion [{x+1}, {y+1}]: '))
 
-    resultado = np.inner(matriz_a, matriz_b)
+    b = np.zeros(filas_matriz)
+    print('Ingrese los valores de la igualdad en la ecuacion: ')
+    for x in range(filas_matriz):
+        b[x] = float(input('Ingrese el valor para la posicion {x+1}: '))
+
+    resultado = np.linalg.solve(a, b)
 
     return resultado
 
