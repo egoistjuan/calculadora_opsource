@@ -17,7 +17,7 @@ while True:
     2)Hacer una multiplicacion de N numeros,
     3)Hacer una division de 2 numeros
     4)Resolver la posicion en Y (para la ecuacion y = mx + b)
-    5)Resolver matrices
+    5)Resolver ecuaciones lineales
           
     0)Salir del programa
 
@@ -58,7 +58,7 @@ while True:
     
     elif opcion == 5:
         resultado = resolver_matrices()
-        print(f'El resultado de la matriz es: {resultado}')
+        print(f'El resultado de la ecuacion lineal es: {resultado}')
 
 
     
