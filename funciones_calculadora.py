@@ -1,4 +1,5 @@
 import math
+import numpy as np
 
 def sumar_n_numeros():
     numeros_a_sumar = int(input('Cuantos numeros quieres sumar? '))
@@ -41,5 +42,25 @@ def resolver_para_y():
     resultado = (pendiente * punto_x) + ordenada_al_origen
 
     return {'resultado' :resultado, 'pendiente' :pendiente, 'ordenada_al_origen':ordenada_al_origen, 'punto_en_x' :punto_x}
+
+def resolver_matrices():
+    a = int(input('Ingrese el tamaño de las matrices: '))
+    matriz_a = np.array([])
+    for i in range(a):
+        x = float(input('Ingrese los valores de la primer matriz: '))
+        matriz_a = np.append(matriz_a, x)
+    print(np.floor(matriz_a.reshape((a, -i))))
+
+    matriz_b = np.array([])
+    for i in range(a):
+        y = float(input('Ingrese los valores de la segunda matriz: '))
+        matriz_b = np.append(matriz_b, y)
+    print(np.floor(matriz_b.reshape((a, -i))))
+
+    resultado = np.inner(matriz_a, matriz_b)
+
+    return resultado
+
+    
 
 
